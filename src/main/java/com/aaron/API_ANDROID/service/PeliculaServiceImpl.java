@@ -35,4 +35,9 @@ public class PeliculaServiceImpl implements PeliculaService{
         Set<Pelicula> peliculas = peliculaRepository.findByGenero(genero);
         return peliculas;
     }
+
+    @Override
+    public Set<Pelicula> top10() {
+        return peliculaRepository.top10();
+    }
 }

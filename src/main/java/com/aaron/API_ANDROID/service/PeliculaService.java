@@ -9,4 +9,5 @@ public interface PeliculaService {
     Set<Pelicula> findAll();
     Set<Pelicula> findBySinopsisContaining(String sinopsis);
     Set<Pelicula> findByIdGenero(String genero);
+    Set<Pelicula> top10();
 }

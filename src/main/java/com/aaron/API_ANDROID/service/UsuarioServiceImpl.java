@@ -15,4 +15,9 @@ public class UsuarioServiceImpl implements UsuarioService{
     public Usuario getUsuarioLogin(String email, String password) {
         return usuarioRepository.findByEmailAndPassword(email,password);
     }
+
+    @Override
+    public Usuario addUsuario(Usuario usuario) {
+        return usuarioRepository.save(usuario);
+    }
 }

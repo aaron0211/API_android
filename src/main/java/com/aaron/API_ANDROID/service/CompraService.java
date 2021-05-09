@@ -9,6 +9,6 @@ import java.util.Set;
 public interface CompraService {
 
     Set<Compra> findAll();
-    Set<Compra> findByUsuario(int id_usuario);
+    Set<Compra> findCompraIdUsuario(int id_usuario);
     Compra addCompra(ArrayList<EntradaDTO> entradas);
 }

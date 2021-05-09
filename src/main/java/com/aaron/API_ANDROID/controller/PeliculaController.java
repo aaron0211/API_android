@@ -34,4 +34,10 @@ public class PeliculaController {
         Set<Pelicula> peliculas = peliculaService.findByIdGenero(genero);
         return new ResponseEntity<>(peliculas,HttpStatus.OK);
     }
+
+    @GetMapping(value = "/peliculas/top10", produces = "application/json")
+    public ResponseEntity<Set<Pelicula>> getTop10(){
+        Set<Pelicula> peliculas = peliculaService.top10();
+        return new ResponseEntity<>(peliculas,HttpStatus.OK);
+    }
 }

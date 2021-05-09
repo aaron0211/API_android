@@ -40,9 +40,9 @@ public class CompraServiceImpl implements CompraService{
     }
 
     @Override
-    public Set<Compra> findByUsuario(int id_usuario) {
-        Usuario usuario = usuarioRepository.getQuery(id_usuario);
-        return compraRepository.findByUsuario(usuario);
+    public Set<Compra> findCompraIdUsuario(int id_usuario) {
+        System.out.println(id_usuario);
+        return compraRepository.getQuery(id_usuario);
     }
 
     @Override

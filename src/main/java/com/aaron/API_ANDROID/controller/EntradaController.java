@@ -25,4 +25,10 @@ public class EntradaController {
         Set<Entrada> entradas = entradaService.findAll();
         return new ResponseEntity<>(entradas,HttpStatus.OK);
     }
+
+    @GetMapping(value = "/entradas/sesion", produces = "application/json")
+    public ResponseEntity<Set<Entrada>> getEntradasSesion(@RequestParam("sesion")int id_sesion){
+        Set<Entrada> entradas = entradaService.findEntradaSesion(id_sesion);
+        return new ResponseEntity<>(entradas,HttpStatus.OK);
+    }
 }
