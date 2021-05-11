@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +40,6 @@ public class CompraServiceImpl implements CompraService{
 
     @Override
     public Set<Compra> findCompraIdUsuario(int id_usuario) {
-        System.out.println(id_usuario);
         return compraRepository.getQuery(id_usuario);
     }
 
