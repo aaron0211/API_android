@@ -29,6 +29,7 @@ public class CompraController {
 
     @GetMapping(value = "/compras/id", produces = "application/json")
     public ResponseEntity<Set<Compra>> getCompraIdUsuario(@RequestParam("id")int id){
+        
         Set<Compra> compras = compraService.findCompraIdUsuario(id);
         return new ResponseEntity<>(compras, HttpStatus.OK);
     }
